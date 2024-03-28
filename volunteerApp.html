@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRIDGE THE GAP - Volunteer</title>
+  <link rel="stylesheet" href="style.css"> <!-- Include the common styles -->
+  <style>
+    /* Additional styles for the "volunteer" page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background: #333;
+      padding: 1em 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin-right: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    #volunteer-page {
+      display: none;
+    }
+
+    #volunteer-page.show {
+      display: block;
+    }
+
+    #event-columns {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #ongoing-events,
+    #upcoming-events {
+      flex: 1;
+      margin: 10px;
+    }
+
+    #volunteer-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #volunteer-form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    #volunteer-form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    #volunteer-form button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="BRIDGE THE GAP Logo" class="logo">
+      <h1>BRIDGE THE GAP</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#donate-form">Make a Donation</a></li>
+        <li><a href="#volunteer-form" onclick="showVolunteerPage()">Volunteer</a></li>
+        <li><a href="donate_form.html">Donate Items</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="volunteer-page">
+    <h2>Volunteer for Events</h2>
+    <div id="event-columns">
+      <div id="ongoing-events">
+        <h3>Ongoing Events</h3>
+        <!-- Display ongoing events dynamically -->
+        <ul>
+          <li>Event 1</li>
+          <li>Event 2</li>
+          <!-- Add more events dynamically -->
+        </ul>
+      </div>
+
+      <div id="upcoming-events">
+        <h3>Upcoming Events</h3>
+        <!-- Display upcoming events information -->
+        <p>No upcoming events at the moment.</p>
+      </div>
+    </div>
+
+    <!-- Volunteer form for ongoing events -->
+    <form id="volunteer-form" action="process_volunteer.php" method="post">
+      <label for="volunteer-name">Your Name:</label>
+      <input type="text" id="volunteer-name" name="volunteer-name" required>
+
+      <label for="volunteer-aadhar-pic">Aadhar Card Picture:</label>
+      <input type="file" id="volunteer-aadhar-pic" name="volunteer-aadhar-pic" accept="image/*" required>
+
+      <label for="volunteer-phone">Phone Number:</label>
+      <input type="tel" id="volunteer-phone" name="volunteer-phone" required>
+
+      <button type="submit">Volunteer for Ongoing Event</button>
+    </form>
+  </div>
+
+  <!-- ... rest of the HTML content ... -->
+
+  <script>
+    function showVolunteerPage() {
+      document.getElementById("volunteer-page").classList.add("show");
+    }
+  </script>
+</body>
+</html>

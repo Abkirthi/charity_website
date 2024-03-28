@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRIDGE THE GAP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="/images/logo.png" alt="BRIDGE THE GAP Logo" class="logo">
+      <h1>BRIDGE THE GAP</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#donate-form">Make a Donation</a></li>
+        <li><a href="#volunteer-form">Volunteer</a></li>
+        <li><a href="donate_form.html">Donate Items</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="flex-container">
+    <div class="donation">
+      <h2>Make a Donation</h2>
+      <p>Your support can change lives. Contribute to our cause and help those in need.</p>
+      <a href="#donate-form">Donate Now</a>
+    </div>
+
+    <div class="volunteer">
+      <h2>Volunteer for Campaigns</h2>
+      <p>We welcome volunteers to join our campaigns. Be part of the change!</p>
+      <a href="volunteer.html">Volunteer Now</a>
+    </div>
+
+    <div class="items">
+      <h2>Donate Items</h2>
+      <p>Have unused items in good condition? <a href="donate_form.html">Donate here</a></p>
+      <p>and we'll put them to good use!</p>
+    </div>
+  </section>
+
+
+
+  
+  <section id="donate-form">
+    <h2>Make a Donation</h2>
+    <form action="process_donation.php" method="post">
+      <!-- Donation form fields go here -->
+      <label for="donation-amount">Donation Amount:</label>
+      <input type="text" id="donation-amount" name="donation-amount" required>
+      <button type="submit">Submit Donation</button>
+    </form>
+  </section>
+
+  <section id="volunteer-form">
+    <h2>Volunteer for Campaigns</h2>
+    <form action="volunteer_signup.php" method="post">
+      <!-- Volunteer form fields go here -->
+      <label for="volunteer-name">Your Name:</label>
+      <input type="text" id="volunteer-name" name="volunteer-name" required>
+      <button type="submit">Sign Up as Volunteer</button>
+    </form>
+  </section>
+
+  <section id="item-form">
+    <h2>Donate Items</h2>
+    <form action="item_donation.php" method="post">
+      <!-- Item donation form fields go here -->
+      <label for="item-name">Item Name:</label>
+      <input type="text" id="item-name" name="item-name" required>
+      <label for="item-condition">Item Condition:</label>
+      <input type="text" id="item-condition" name="item-condition" required>
+      <label for="item-description">Item Description:</label>
+      <textarea id="item-description" name="item-description" required></textarea>
+      <button type="submit">Submit Item Donation</button>
+    </form>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to BRIDGE THE GAP, where we strive to make a positive impact on the world. Our mission is to bridge the gap between those in need and those who can help. Through charitable donations, volunteer efforts, and item contributions, we aim to create a better future for all.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to get in touch, feel free to reach out to us:</p>
+    <ul>
+      <li>Email: info@bridgethegap.org</li>
+      <li>Phone: (555) 123-4567</li>
+      <li>Address: 123 Charity Lane, Cityville, State, 12345</li>
+    </ul>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* style_donate.css */
+
+#item-form {
+    background-image: url('/images/donateitemsbackground.jpeg'); /* Replace 'form_background.jpg' with the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  #item-form form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #item-form label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  #item-form input,
+  #item-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #item-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
